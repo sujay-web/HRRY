@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ShopSphere — Modern E‑Commerce</title>
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>" />
+</head>
+<body>
+  <div id="app-header"></div>
+
+  <main class="container page">
+    <section class="hero">
+      <div class="hero-text">
+        <span class="pill">Free shipping over $100</span>
+        <h1>Everything you love,<br />delivered to your door.</h1>
+        <p>Thousands of curated products across electronics, fashion, home and more — at prices that make sense.</p>
+        <div class="hero-actions">
+          <a href="#catalog" class="btn btn-primary">Start shopping</a>
+          <a href="orders.html" class="btn btn-outline">Track my orders</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="blob"></div>
+        <span class="float f1">🎧</span>
+        <span class="float f2">👟</span>
+        <span class="float f3">⌚</span>
+        <span class="float f4">📚</span>
+      </div>
+    </section>
+
+    <section id="catalog">
+      <div class="section-head">
+        <h2>Browse the catalog</h2>
+        <div class="toolbar">
+          <select id="sort-select" class="select" aria-label="Sort products">
+            <option value="newest">Newest</option>
+            <option value="price_asc">Price: Low → High</option>
+            <option value="price_desc">Price: High → Low</option>
+            <option value="rating">Top rated</option>
+            <option value="name">Name A–Z</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="chips" id="category-chips"></div>
+
+      <p class="results-meta" id="results-meta"></p>
+
+      <div class="grid" id="product-grid"></div>
+
+      <div class="empty hidden" id="empty-state">
+        <div class="empty-emoji">🔍</div>
+        <h3>No products found</h3>
+        <p>Try a different search term or category.</p>
+        <button class="btn btn-outline" id="reset-filters">Reset filters</button>
+      </div>
+
+      <div class="pagination" id="pagination"></div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+  <div id="toast-root" class="toast-root"></div>
+
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

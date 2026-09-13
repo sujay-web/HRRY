@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cart — ShopSphere</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="app-header"></div>
+<main class="container page">
+  <h1>Your cart</h1>
+  <div id="cart-container"></div>
+  <div id="cart-summary" class="cart-summary hidden">
+    <div class="summary-row"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+    <div class="summary-row"><span>Shipping</span><span>Free</span></div>
+    <div class="summary-row total"><span>Total</span><span id="total">$0.00</span></div>
+    <button class="btn btn-primary btn-block" id="checkout-btn">Proceed to checkout</button>
+  </div>
+</main>
+<div id="app-footer"></div>
+<div id="toast-root" class="toast-root"></div>
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>
